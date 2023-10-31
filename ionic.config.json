@@ -1,0 +1,7 @@
+{
+  "name": "Front-End-AppGPDS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
