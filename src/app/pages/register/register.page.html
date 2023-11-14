@@ -1,0 +1,60 @@
+
+<ion-content>
+
+  <div id="header">
+    <div id="app-bar" class="ion-justify-content-center">
+      <!-- <ion-icon name="arrow-back" routerlink="/welcome"></ion-icon> -->
+      <div id="logo" >
+        <img src="assets/logo.png" alt="" />
+      </div>
+      <div></div>
+    </div>
+    <h1>Regístrate</h1>
+    <p>Regístrate para iniciar con la <br/> App-agremiados </p>
+  </div>
+
+
+  <div class="wrapper">
+    <ion-grid >
+      <ion-row>
+        <ion-col size="12" sizeMd="8"  offsetMd="2" sizeXl="6" offsetXl="3" >
+          <form  [formGroup]="formRegister" (ngSubmit)="submit()" >
+            <ion-card class="form-wrapper">
+              <ion-card-content>
+                <ion-item>
+                  <ion-icon name="person"></ion-icon>
+                  <ion-input formControlName="NUE" type="text" placeholder="Usuario"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-icon name="lock-closed"></ion-icon>
+                  <ion-input type="password" formArrayName="password" placeholder="Contraseña"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-icon name="body"></ion-icon>
+                  <ion-select formControlName="id_rol"   multiple="false" placeholder="Rol de usuario" type="number">
+                    <ion-select-option >seste es un select</ion-select-option>
+                  </ion-select>
+                </ion-item>
+                <ion-button expand="block" >
+                  Registrarse
+                </ion-button>
+              </ion-card-content>
+            </ion-card>
+          </form>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="flex-h ion-justify-content-center">
+          <ion-text class="colorT">
+            <small class="smallText">Ya tienes cuenta?</small>
+          </ion-text>
+          <ion-text color="primary" class="marginL-T">
+            <!-- <small>  Regístrate</small> -->
+          <small class="smallText"><a [routerLink]="['/login']">Inicia sesión</a></small> 
+          </ion-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
